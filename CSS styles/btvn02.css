@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+
+:root {
+    --bg-color: #66ffe0;
+    --color-text: #4d0026;
+}
+
+.nav {
+    width: 20rem;
+    background-color: var(--bg-color);
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    /* min-height: 5rem; */
+}
+
+.nav__link {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.nav__item {
+    border-bottom: thin solid #ccc;
+    padding: 1rem 0;
+    position: relative;
+    left: 0;
+}
+
+.nav__item:last-child {
+    border: none;
+}
+
+.nav__item:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.nav__item:hover > .nav__link {
+    color: white;
+}
+
+ /* menu con sổ xuống cấp 1 2 */
+.nav__dropdown {
+    display: none;
+    width: 20rem;
+    background-color: var(--bg-color);
+}
+
+.nav__item:hover > .nav__dropdown {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
